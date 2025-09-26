@@ -64,9 +64,15 @@ export default function FAQ() {
         <div className="slogan-cta mt-4 text-center">
           <p className="slogan m-0"><strong>MEDULA</strong>, {t("slogan").text}</p>
           <div className="mt-3">
-            <a href="https://TU-URL-DE-LOGIN.com" target="_blank" rel="noopener" className="btn-grad btn-xl">
-              {t("login").text}
-            </a>
+            
+            <a
+  href="https://TU-URL-DE-LOGIN.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-grad btn-xl"
+>
+  {t("login").text}
+</a>
           </div>
         </div>
       </div>
