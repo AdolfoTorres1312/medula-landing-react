@@ -157,3 +157,78 @@ footer .logos img{
 
 /* Dropdown hamburguesa */
 .menu-pop{ width:86vw; max-width:340px; }
+/* =========================
+   FIX: Features en móviles
+   ========================= */
+
+.feature {
+  background: #ffffff;
+  border: 1px solid #e8eef8;
+  border-radius: 12px;
+  padding: 16px 14px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  /* evita que el contenido “salga” de la tarjeta */
+  overflow-wrap: anywhere;      /* rompe palabras largas */
+  word-break: break-word;
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.feature-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.feature-title {
+  font-weight: 800;
+  font-size: 1rem;              /* <= baja un poco el tamaño */
+  line-height: 1.2;
+  margin-bottom: 6px;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;                /* ayuda a cortar palabras en iOS/Android */
+}
+
+.feature-desc {
+  color: #516176;
+  font-size: 0.93rem;           /* un poco más pequeño */
+  line-height: 1.35;
+  margin: 0;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Ajustes globales suaves para pantallas muy pequeñas */
+@media (max-width: 390px) {
+  .feature-title { font-size: 0.95rem; }
+  .feature-desc  { font-size: 0.88rem; }
+  .feature       { padding: 14px 12px; }
+  .feature-icon  { width: 50px; height: 50px; }
+}
+
+/* iPhone SE / Android compactos */
+@media (max-width: 340px) {
+  .feature-title { font-size: 0.9rem; }
+  .feature-desc  { font-size: 0.84rem; }
+  .feature-icon  { width: 46px; height: 46px; }
+}
+
+/* (Opcional) si notas que con 2 columnas aún aprieta mucho, 
+   fuerza 1 columna en xs y 2 en sm con Bootstrap:
+   - En tu JSX ya usas col-6; si quisieras 1 col en xs, cambia a col-12 col-sm-6.
+*/
